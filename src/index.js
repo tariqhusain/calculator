@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';  // this is JSX syntax
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';

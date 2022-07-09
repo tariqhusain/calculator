@@ -1,23 +1,73 @@
 import logo from './logo.svg';
 import './App.css';
+import CalculatorDisplay from './CalculatorDisplay';
+import CalculatorKeypad from './CalculatorKeypad';
+import React, { useState } from "react";
+
+/*
+React components calculatorApp, calculatorDisplay, calculatorKeypad
+ACTION
+define Button component and render it through a loop
+*/
 
 function App() {
+  let [calc, setCalc] = useState({
+    keypressed: "",
+    display: ""
+  });
+
+  let handleClick = (e) => {
+    // console.log(e.target.id);
+    let currKey = e.target.id;
+    
+    if (currKey === "AC") {
+      setCalc({
+        keypressed: currKey,
+        display: ""
+      })
+    } else if (calc.keypressed === "=") {
+      setCalc({
+        keypressed: "",
+        display: currKey
+      })
+    } else {
+      if (currKey === "=") {
+        setCalc({
+          keypressed: currKey,
+          display: eval(calc.display)
+        })
+      } else if (currKey === "%") {
+        setCalc({
+          keypressed: currKey,
+          display: calc.display/100
+        })
+      } else if (currKey === "+/-") {
+        if (calc.display[0] !== "-") {
+          setCalc({
+            keypressed: currKey,
+            display: "-" + calc.display
+          })
+        } else {
+          setCalc({
+            keypressed: currKey,
+            display: calc.display.substring(1)
+          })
+        }
+      } else {
+        setCalc({
+          keypressed: currKey,
+          display: calc.display + currKey
+        });
+      }
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="container" id="calculator">
+        <CalculatorDisplay currKeyPressed = {calc.keypressed} display = {calc.display}/>
+        <CalculatorKeypad onClick={(e) => handleClick(e)}/>
+      </div>
     </div>
   );
 }

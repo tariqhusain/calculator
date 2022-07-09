@@ -1,38 +1,31 @@
-.App {
+#calculator {
+  width: 300px;
+}
+
+.container {
+  display: inline-block;
   text-align: center;
+  margin: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#display {
+  text-align: left;
+  height: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#displaySpan {
+  padding-top: 12.5px;
+  padding-left: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#keypad .row {
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.col {
+  border: 1px solid;
+  border-color: black;
+  margin: 0px; /* !importnat if you want it to forcefully over-write any other places where this may be set */
+  padding: 0px;
 }
