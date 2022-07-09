@@ -1,6 +1,6 @@
 {
   "name": "calculator",
-  "homepage": "https://github.com/tariqhusain/calculator",
+  "homepage": "https://github.com/tariqhusain/calculator/build/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
