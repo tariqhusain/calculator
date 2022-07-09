@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/tariqhusain/calculator/static/css/main.f3af6eac.css",
+    "main.js": "/tariqhusain/calculator/static/js/main.9ccd1dc8.js",
+    "static/js/787.a174f9e5.chunk.js": "/tariqhusain/calculator/static/js/787.a174f9e5.chunk.js",
+    "static/media/logo.svg": "/tariqhusain/calculator/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/tariqhusain/calculator/index.html",
+    "main.f3af6eac.css.map": "/tariqhusain/calculator/static/css/main.f3af6eac.css.map",
+    "main.9ccd1dc8.js.map": "/tariqhusain/calculator/static/js/main.9ccd1dc8.js.map",
+    "787.a174f9e5.chunk.js.map": "/tariqhusain/calculator/static/js/787.a174f9e5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3af6eac.css",
+    "static/js/main.9ccd1dc8.js"
+  ]
+}
